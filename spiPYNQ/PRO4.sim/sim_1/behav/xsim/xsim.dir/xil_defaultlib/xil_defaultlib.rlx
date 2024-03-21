@@ -1,0 +1,12 @@
+0.7
+2020.2
+Oct 13 2023
+20:21:30
+/home/mads/Documents/4.semester/DIgitilSystemDesign/PRO4/PRO4.gen/sources_1/bd/test/hdl/test_wrapper.v,1711024481,verilog,,,,test_wrapper,,,,,,,,
+/home/mads/Documents/4.semester/DIgitilSystemDesign/PRO4/PRO4.ip_user_files/bd/test/ip/test_comparator_0_0/sim/test_comparator_0_0.v,1711026312,verilog,,/home/mads/Documents/4.semester/DIgitilSystemDesign/PRO4/PRO4.ip_user_files/bd/test/ip/test_spi_slave_0_0/sim/test_spi_slave_0_0.v,,test_comparator_0_0,,,,,,,,
+/home/mads/Documents/4.semester/DIgitilSystemDesign/PRO4/PRO4.ip_user_files/bd/test/ip/test_spi_slave_0_0/sim/test_spi_slave_0_0.v,1711026631,verilog,,/home/mads/Documents/4.semester/DIgitilSystemDesign/PRO4/PRO4.ip_user_files/bd/test/ip/test_xlconstant_0_0/sim/test_xlconstant_0_0.v,,test_spi_slave_0_0,,,,,,,,
+/home/mads/Documents/4.semester/DIgitilSystemDesign/PRO4/PRO4.ip_user_files/bd/test/ip/test_xlconstant_0_0/sim/test_xlconstant_0_0.v,1711021604,verilog,,/home/mads/Documents/4.semester/DIgitilSystemDesign/PRO4/PRO4.ip_user_files/bd/test/sim/test.v,,test_xlconstant_0_0,,,,,,,,
+/home/mads/Documents/4.semester/DIgitilSystemDesign/PRO4/PRO4.ip_user_files/bd/test/sim/test.v,1711027605,verilog,,/home/mads/Documents/4.semester/DIgitilSystemDesign/PRO4/PRO4.gen/sources_1/bd/test/hdl/test_wrapper.v,,test,,,,,,,,
+/home/mads/Documents/4.semester/DIgitilSystemDesign/PRO4/PRO4.sim/sim_1/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,,,,,,,
+/home/mads/Documents/4.semester/DIgitilSystemDesign/PRO4/PRO4.srcs/sources_1/new/spi.vhd,1711026569,vhdl,,,,spi_slave,,,,,,,,
+/home/mads/Documents/4.semester/DIgitilSystemDesign/assignment_clock/assignment_clock.srcs/sources_1/new/comparator.vhd,1711025024,vhdl,,,,comparator,,,,,,,,

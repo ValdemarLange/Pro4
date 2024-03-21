@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Mar 21 14:26:46 2024" VIVADOVERSION="2023.2">
+
+  <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="test" PACKAGE="clg400" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="O" NAME="busy" SIGIS="undef" SIGNAME="spi_slave_0_o_busy">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="spi_slave_0" PORT="o_busy"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="ck_miso" SIGIS="undef" SIGNAME="spi_slave_0_ck_miso">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="spi_slave_0" PORT="ck_miso"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="ck_mosi" SIGIS="undef" SIGNAME="External_Ports_ck_mosi">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="spi_slave_0" PORT="ck_mosi"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="ck_sck" SIGIS="undef" SIGNAME="External_Ports_ck_sck">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="spi_slave_0" PORT="ck_sck"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="ck_ss" SIGIS="undef" SIGNAME="External_Ports_ck_ss">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="spi_slave_0" PORT="ck_ss"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="7" NAME="cout" RIGHT="0" SIGIS="data" SIGNAME="spi_slave_0_o_data_parallel">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="spi_slave_0" PORT="o_data_parallel"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="i_parallel" SIGIS="undef" SIGNAME="External_Ports_i_parallel">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="spi_slave_0" PORT="i_data_parallel"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="led" SIGIS="undef" SIGNAME="comparator_0_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="comparator_0" PORT="o"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/comparator_0" HWVERSION="1.0" INSTANCE="comparator_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="comparator" VLNV="xilinx.com:module_ref:comparator:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="n_bits" VALUE="8"/>
+        <PARAMETER NAME="Component_Name" VALUE="test_comparator_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="a" RIGHT="0" SIGIS="undef" SIGNAME="spi_slave_0_o_data_parallel">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="spi_slave_0" PORT="o_data_parallel"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="b" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_0" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o" SIGIS="undef" SIGNAME="comparator_0_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="led"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/spi_slave_0" HWVERSION="1.0" INSTANCE="spi_slave_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="spi_slave" VLNV="xilinx.com:module_ref:spi_slave:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CPOL" VALUE="&quot;0&quot;"/>
+        <PARAMETER NAME="N" VALUE="8"/>
+        <PARAMETER NAME="Component_Name" VALUE="test_spi_slave_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="ck_miso" SIGIS="undef" SIGNAME="spi_slave_0_ck_miso">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ck_miso"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ck_mosi" SIGIS="undef" SIGNAME="External_Ports_ck_mosi">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ck_mosi"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ck_sck" SIGIS="undef" SIGNAME="External_Ports_ck_sck">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ck_sck"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ck_ss" SIGIS="undef" SIGNAME="External_Ports_ck_ss">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ck_ss"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="i_data_parallel" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_i_parallel">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_parallel"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_busy" SIGIS="undef" SIGNAME="spi_slave_0_o_busy">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="busy"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="o_data_parallel" RIGHT="0" SIGIS="undef" SIGNAME="spi_slave_0_o_data_parallel">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="cout"/>
+            <CONNECTION INSTANCE="comparator_0" PORT="a"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="8" FULLNAME="/xlconstant_0" HWVERSION="1.1" INSTANCE="xlconstant_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x01"/>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="8"/>
+        <PARAMETER NAME="Component_Name" VALUE="test_xlconstant_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="7" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="comparator_0" PORT="b"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

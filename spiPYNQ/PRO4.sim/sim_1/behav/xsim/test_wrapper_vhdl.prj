@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../assignment_clock/assignment_clock.srcs/sources_1/new/comparator.vhd" \
+"../../../../PRO4.srcs/sources_1/new/spi.vhd" \
+
+# Do not sort compile order
+nosort

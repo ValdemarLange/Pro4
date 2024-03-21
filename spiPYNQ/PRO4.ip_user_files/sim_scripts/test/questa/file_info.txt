@@ -1,0 +1,6 @@
+test_comparator_0_0.v,verilog,xil_defaultlib,../../../bd/test/ip/test_comparator_0_0/sim/test_comparator_0_0.v,
+test_spi_slave_0_0.v,verilog,xil_defaultlib,../../../bd/test/ip/test_spi_slave_0_0/sim/test_spi_slave_0_0.v,
+xlconstant_v1_1_vl_rfs.v,verilog,xlconstant_v1_1_8,../../../../PRO4.gen/sources_1/bd/test/ipshared/d390/hdl/xlconstant_v1_1_vl_rfs.v,
+test_xlconstant_0_0.v,verilog,xil_defaultlib,../../../bd/test/ip/test_xlconstant_0_0/sim/test_xlconstant_0_0.v,
+test.v,verilog,xil_defaultlib,../../../bd/test/sim/test.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

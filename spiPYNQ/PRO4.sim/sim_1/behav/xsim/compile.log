@@ -1,0 +1,10 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mads/Documents/4.semester/DIgitilSystemDesign/PRO4/PRO4.ip_user_files/bd/test/ip/test_comparator_0_0/sim/test_comparator_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_comparator_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mads/Documents/4.semester/DIgitilSystemDesign/PRO4/PRO4.ip_user_files/bd/test/ip/test_spi_slave_0_0/sim/test_spi_slave_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_spi_slave_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mads/Documents/4.semester/DIgitilSystemDesign/PRO4/PRO4.ip_user_files/bd/test/ip/test_xlconstant_0_0/sim/test_xlconstant_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_xlconstant_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mads/Documents/4.semester/DIgitilSystemDesign/PRO4/PRO4.ip_user_files/bd/test/sim/test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mads/Documents/4.semester/DIgitilSystemDesign/PRO4/PRO4.gen/sources_1/bd/test/hdl/test_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_wrapper

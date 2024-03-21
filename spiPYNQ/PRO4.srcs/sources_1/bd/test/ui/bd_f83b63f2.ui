@@ -1,0 +1,32 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"2.0",
+   "Default View_TopLeft":"-421,-288",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port port-id_led -pg 1 -lvl 3 -x 600 -y 210 -defaultsOSRD
+preplace port port-id_ck_sck -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace port port-id_ck_ss -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace port port-id_ck_mosi -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
+preplace port port-id_ck_miso -pg 1 -lvl 3 -x 600 -y 110 -defaultsOSRD
+preplace port port-id_busy -pg 1 -lvl 3 -x 600 -y 70 -defaultsOSRD
+preplace port port-id_i_parallel -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace portBus cout -pg 1 -lvl 3 -x 600 -y 90 -defaultsOSRD
+preplace inst spi_slave_0 -pg 1 -lvl 1 -x 210 -y 90 -defaultsOSRD
+preplace inst comparator_0 -pg 1 -lvl 2 -x 490 -y 210 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 1 -x 210 -y 220 -defaultsOSRD
+preplace netloc xlconstant_0_dout 1 1 1 N 220
+preplace netloc spi_slave_0_o_data_parallel 1 1 2 400 90 NJ
+preplace netloc comparator_0_o 1 2 1 NJ 210
+preplace netloc mosi_1 1 0 1 NJ 120
+preplace netloc ss_1 1 0 1 NJ 100
+preplace netloc sck_1 1 0 1 NJ 80
+preplace netloc spi_slave_0_ck_miso 1 1 2 NJ 110 NJ
+preplace netloc spi_slave_0_o_busy 1 1 2 NJ 70 NJ
+preplace netloc i_parallel_1 1 0 1 NJ 60
+levelinfo -pg 1 0 210 490 600
+pagesize -pg 1 -db -bbox -sgen -120 0 720 280
+"
+}
+

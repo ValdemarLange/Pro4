@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../PRO4.ip_user_files/bd/test/ip/test_comparator_0_0/sim/test_comparator_0_0.v" \
+"../../../../PRO4.ip_user_files/bd/test/ip/test_spi_slave_0_0/sim/test_spi_slave_0_0.v" \
+"../../../../PRO4.ip_user_files/bd/test/ip/test_xlconstant_0_0/sim/test_xlconstant_0_0.v" \
+"../../../../PRO4.ip_user_files/bd/test/sim/test.v" \
+"../../../../PRO4.gen/sources_1/bd/test/hdl/test_wrapper.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

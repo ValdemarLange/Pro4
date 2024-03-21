@@ -1,0 +1,10 @@
+verilog xil_defaultlib  \
+"../../../bd/test/ip/test_comparator_0_0/sim/test_comparator_0_0.v" \
+"../../../bd/test/ip/test_spi_slave_0_0/sim/test_spi_slave_0_0.v" \
+"../../../bd/test/ip/test_xlconstant_0_0/sim/test_xlconstant_0_0.v" \
+"../../../bd/test/sim/test.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

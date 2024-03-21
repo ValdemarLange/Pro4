@@ -10,14 +10,14 @@
 int main(void)
 {
     unsigned char val1 = 'A';
-	unsigned char val2 = 'B';
+    unsigned char val2 = 'B';
 
     SPI1_init();
     while(1)
 		{              
     SPI1_Write(val1); /* write a character */
     Delay_ms(1000);
-		SPI1_Write(val2); /* write a character */
+    SPI1_Write(val2); /* write a character */
     Delay_ms(1000);	
     }
 }
@@ -25,7 +25,7 @@ int main(void)
 void SPI1_Write(unsigned char data)
 {
     //Drive slave select (SS) pin low - indicate start of SPI communication
-	GPIO_PORTF_DATA_R &= ~(1<<2); 
+    GPIO_PORTF_DATA_R &= ~(1<<2); 
     while((SSI1_SR_R & 2) == 0); /* wait untill Tx buffer is empty */
     SSI1_DR_R = data;            /* transmit byte over SSI1Tx line */
     while(SSI1_SR_R & 0x10);     /* wait until transmit complete */

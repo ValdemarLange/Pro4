@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Thu Mar 21 13:27:47 2024
+# Process ID: 42959
+# Current directory: /home/mads/Documents/4.semester/DIgitilSystemDesign/PRO4/PRO4.runs/synth_1
+# Command line: vivado -log test_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source test_wrapper.tcl
+# Log file: /home/mads/Documents/4.semester/DIgitilSystemDesign/PRO4/PRO4.runs/synth_1/test_wrapper.vds
+# Journal file: /home/mads/Documents/4.semester/DIgitilSystemDesign/PRO4/PRO4.runs/synth_1/vivado.jou
+# Running On: madsxps, OS: Linux, CPU Frequency: 701.355 MHz, CPU Physical cores: 14, Host memory: 33300 MB
+#-----------------------------------------------------------
+source test_wrapper.tcl -notrace

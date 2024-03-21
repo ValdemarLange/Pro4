@@ -1,0 +1,191 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x546B1F03546B1F03",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../PRO4.gen/sources_1/bd/test",
+      "name": "test",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "spi_slave_0": "",
+      "comparator_0": "",
+      "xlconstant_0": ""
+    },
+    "ports": {
+      "led": {
+        "direction": "O"
+      },
+      "ck_sck": {
+        "direction": "I"
+      },
+      "ck_ss": {
+        "direction": "I"
+      },
+      "ck_mosi": {
+        "direction": "I"
+      },
+      "ck_miso": {
+        "direction": "O"
+      },
+      "cout": {
+        "type": "data",
+        "direction": "O",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "busy": {
+        "direction": "O"
+      },
+      "i_parallel": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "spi_slave_0": {
+        "vlnv": "xilinx.com:module_ref:spi_slave:1.0",
+        "ip_revision": "1",
+        "xci_name": "test_spi_slave_0_0",
+        "xci_path": "ip/test_spi_slave_0_0/test_spi_slave_0_0.xci",
+        "inst_hier_path": "spi_slave_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "spi_slave",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "o_busy": {
+            "direction": "O"
+          },
+          "i_data_parallel": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "o_data_parallel": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "ck_sck": {
+            "direction": "I"
+          },
+          "ck_ss": {
+            "direction": "I"
+          },
+          "ck_mosi": {
+            "direction": "I"
+          },
+          "ck_miso": {
+            "direction": "O"
+          }
+        }
+      },
+      "comparator_0": {
+        "vlnv": "xilinx.com:module_ref:comparator:1.0",
+        "ip_revision": "1",
+        "xci_name": "test_comparator_0_0",
+        "xci_path": "ip/test_comparator_0_0/test_comparator_0_0.xci",
+        "inst_hier_path": "comparator_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "comparator",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "a": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "b": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "o": {
+            "direction": "O"
+          }
+        }
+      },
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "ip_revision": "8",
+        "xci_name": "test_xlconstant_0_0",
+        "xci_path": "ip/test_xlconstant_0_0/test_xlconstant_0_0.xci",
+        "inst_hier_path": "xlconstant_0",
+        "parameters": {
+          "CONST_WIDTH": {
+            "value": "8"
+          }
+        }
+      }
+    },
+    "nets": {
+      "comparator_0_o": {
+        "ports": [
+          "comparator_0/o",
+          "led"
+        ]
+      },
+      "i_parallel_1": {
+        "ports": [
+          "i_parallel",
+          "spi_slave_0/i_data_parallel"
+        ]
+      },
+      "mosi_1": {
+        "ports": [
+          "ck_mosi",
+          "spi_slave_0/ck_mosi"
+        ]
+      },
+      "sck_1": {
+        "ports": [
+          "ck_sck",
+          "spi_slave_0/ck_sck"
+        ]
+      },
+      "spi_slave_0_ck_miso": {
+        "ports": [
+          "spi_slave_0/ck_miso",
+          "ck_miso"
+        ]
+      },
+      "spi_slave_0_o_busy": {
+        "ports": [
+          "spi_slave_0/o_busy",
+          "busy"
+        ]
+      },
+      "spi_slave_0_o_data_parallel": {
+        "ports": [
+          "spi_slave_0/o_data_parallel",
+          "cout",
+          "comparator_0/a"
+        ]
+      },
+      "ss_1": {
+        "ports": [
+          "ck_ss",
+          "spi_slave_0/ck_ss"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "comparator_0/b"
+        ]
+      }
+    }
+  }
+}
