@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"pwm_block": {
+			"proto_instances": {
+			}
+		}
+	}
+}

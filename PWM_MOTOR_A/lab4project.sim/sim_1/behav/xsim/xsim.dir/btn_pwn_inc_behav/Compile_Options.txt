@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" -L "xpm" --snapshot "btn_pwn_inc_behav" "xil_defaultlib.btn_pwn_inc" -log "elaborate.log" 
