@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../PRO4PWM.ip_user_files/bd/pwm_block/ip/pwm_block_xlconstant_0_0/sim/pwm_block_xlconstant_0_0.v" \
+"../../../../PRO4PWM.ip_user_files/bd/pwm_block/ip/pwm_block_xlconstant_0_1/sim/pwm_block_xlconstant_0_1.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

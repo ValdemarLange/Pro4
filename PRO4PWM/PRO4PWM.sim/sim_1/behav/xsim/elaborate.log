@@ -1,0 +1,42 @@
+Vivado Simulator v2023.2.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xlconstant_v1_1_8 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot pwm_block_wrapper_behav xil_defaultlib.pwm_block_wrapper xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling module xlconstant_v1_1_8.xlconstant_v1_1_8_xlconstant(CON...
+Compiling module xil_defaultlib.pwm_block_xlconstant_0_0
+Compiling module xlconstant_v1_1_8.xlconstant_v1_1_8_xlconstant(CON...
+Compiling module xil_defaultlib.pwm_block_xlconstant_0_1
+Compiling architecture behavioral of entity xil_defaultlib.btn_pwn_inc [btn_pwn_inc_default]
+Compiling architecture pwm_block_btn_pwn_inc_0_0_arch of entity xil_defaultlib.pwm_block_btn_pwn_inc_0_0 [pwm_block_btn_pwn_inc_0_0_defaul...]
+Compiling architecture pwm_block_btn_pwn_inc_1_0_arch of entity xil_defaultlib.pwm_block_btn_pwn_inc_1_0 [pwm_block_btn_pwn_inc_1_0_defaul...]
+Compiling architecture behavioral of entity xil_defaultlib.clk_divider [clk_divider_default]
+Compiling architecture pwm_block_clk_divider_0_1_arch of entity xil_defaultlib.pwm_block_clk_divider_0_1 [pwm_block_clk_divider_0_1_defaul...]
+Compiling architecture behavioral of entity xil_defaultlib.comparator [comparator_default]
+Compiling architecture pwm_block_comparator_0_1_arch of entity xil_defaultlib.pwm_block_comparator_0_1 [pwm_block_comparator_0_1_default]
+Compiling architecture pwm_block_comparator_1_0_arch of entity xil_defaultlib.pwm_block_comparator_1_0 [pwm_block_comparator_1_0_default]
+Compiling architecture behavioral of entity xil_defaultlib.counter [counter_default]
+Compiling architecture pwm_block_counter_0_0_arch of entity xil_defaultlib.pwm_block_counter_0_0 [pwm_block_counter_0_0_default]
+Compiling architecture pwm_block_counter_1_0_arch of entity xil_defaultlib.pwm_block_counter_1_0 [pwm_block_counter_1_0_default]
+Compiling architecture behavioral of entity xil_defaultlib.d_latch [d_latch_default]
+Compiling architecture pwm_block_d_latch_0_0_arch of entity xil_defaultlib.pwm_block_d_latch_0_0 [pwm_block_d_latch_0_0_default]
+Compiling architecture pwm_block_d_latch_1_0_arch of entity xil_defaultlib.pwm_block_d_latch_1_0 [pwm_block_d_latch_1_0_default]
+Compiling architecture behavioral of entity xil_defaultlib.demultiplexer_1x2 [demultiplexer_1x2_default]
+Compiling architecture pwm_block_demultiplexer_1x2_0_0_arch of entity xil_defaultlib.pwm_block_demultiplexer_1x2_0_0 [pwm_block_demultiplexer_1x2_0_0_...]
+Compiling architecture pwm_block_demultiplexer_1x2_1_0_arch of entity xil_defaultlib.pwm_block_demultiplexer_1x2_1_0 [pwm_block_demultiplexer_1x2_1_0_...]
+Compiling architecture structure of entity xil_defaultlib.pwm_block [pwm_block_default]
+Compiling architecture structure of entity xil_defaultlib.pwm_block_wrapper
+Built simulation snapshot pwm_block_wrapper_behav

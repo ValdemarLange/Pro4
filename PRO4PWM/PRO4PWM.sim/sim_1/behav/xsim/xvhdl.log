@@ -1,0 +1,38 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/PRO4PWM/PRO4PWM.srcs/sources_1/new/clk_divider.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'clk_divider'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/PRO4PWM/PRO4PWM.srcs/sources_1/new/counter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'counter'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/PRO4PWM/PRO4PWM.srcs/sources_1/new/btn_pwm_inc.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'btn_pwn_inc'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/PRO4PWM/PRO4PWM.srcs/sources_1/new/comparator.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'comparator'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/PRO4PWM/PRO4PWM.srcs/sources_1/new/d_latch.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'd_latch'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/PRO4PWM/PRO4PWM.srcs/sources_1/new/demultiplexer_1x2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'demultiplexer_1x2'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/PRO4PWM/PRO4PWM.ip_user_files/bd/pwm_block/ip/pwm_block_clk_divider_0_1/sim/pwm_block_clk_divider_0_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pwm_block_clk_divider_0_1'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/PRO4PWM/PRO4PWM.ip_user_files/bd/pwm_block/ip/pwm_block_counter_0_0/sim/pwm_block_counter_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pwm_block_counter_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/PRO4PWM/PRO4PWM.ip_user_files/bd/pwm_block/ip/pwm_block_btn_pwn_inc_0_0/sim/pwm_block_btn_pwn_inc_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pwm_block_btn_pwn_inc_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/PRO4PWM/PRO4PWM.ip_user_files/bd/pwm_block/ip/pwm_block_comparator_0_1/sim/pwm_block_comparator_0_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pwm_block_comparator_0_1'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/PRO4PWM/PRO4PWM.ip_user_files/bd/pwm_block/ip/pwm_block_d_latch_0_0/sim/pwm_block_d_latch_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pwm_block_d_latch_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/PRO4PWM/PRO4PWM.ip_user_files/bd/pwm_block/ip/pwm_block_demultiplexer_1x2_0_0/sim/pwm_block_demultiplexer_1x2_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pwm_block_demultiplexer_1x2_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/PRO4PWM/PRO4PWM.ip_user_files/bd/pwm_block/ip/pwm_block_counter_1_0/sim/pwm_block_counter_1_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pwm_block_counter_1_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/PRO4PWM/PRO4PWM.ip_user_files/bd/pwm_block/ip/pwm_block_comparator_1_0/sim/pwm_block_comparator_1_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pwm_block_comparator_1_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/PRO4PWM/PRO4PWM.ip_user_files/bd/pwm_block/ip/pwm_block_d_latch_1_0/sim/pwm_block_d_latch_1_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pwm_block_d_latch_1_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/PRO4PWM/PRO4PWM.ip_user_files/bd/pwm_block/ip/pwm_block_btn_pwn_inc_1_0/sim/pwm_block_btn_pwn_inc_1_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pwm_block_btn_pwn_inc_1_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/PRO4PWM/PRO4PWM.ip_user_files/bd/pwm_block/ip/pwm_block_demultiplexer_1x2_1_0/sim/pwm_block_demultiplexer_1x2_1_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pwm_block_demultiplexer_1x2_1_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/PRO4PWM/PRO4PWM.ip_user_files/bd/pwm_block/sim/pwm_block.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pwm_block'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/PRO4PWM/PRO4PWM.gen/sources_1/bd/pwm_block/hdl/pwm_block_wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pwm_block_wrapper'

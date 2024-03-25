@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/PRO4PWM/PRO4PWM.ip_user_files/bd/pwm_block/ip/pwm_block_xlconstant_0_0/sim/pwm_block_xlconstant_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pwm_block_xlconstant_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/PRO4PWM/PRO4PWM.ip_user_files/bd/pwm_block/ip/pwm_block_xlconstant_0_1/sim/pwm_block_xlconstant_0_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pwm_block_xlconstant_0_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/PRO4PWM/PRO4PWM.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
