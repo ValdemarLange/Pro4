@@ -1,7 +1,0 @@
-Running: xsim.dir/pwm_block_wrapper_behav/xsimk.exe -simmode gui -wdb pwm_block_wrapper_behav.wdb -simrunnum 0 -socket 58282
-Design successfully loaded
-Design Loading Memory Usage: 7928 KB (Peak: 7928 KB)
-Design Loading CPU Usage: 15 ms
-Simulation completed
-Simulation Memory Usage: 16612 KB (Peak: 16612 KB)
-Simulation CPU Usage: 19811 ms

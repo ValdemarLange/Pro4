@@ -1,1 +1,0 @@
---incr --debug typical --relax --mt 2  -L xil_defaultlib -L xlconstant_v1_1_8 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot pwm_block xil_defaultlib.pwm_block xil_defaultlib.glbl -log elaborate.log
