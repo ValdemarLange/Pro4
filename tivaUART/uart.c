@@ -112,9 +112,7 @@ INT16S UART0_SignedINT16_receive(){
 //UARTIBRD - integer baudrate divisor
 //UARTFBRD - fractional baudrate divisor
 
-
 //UARTDR - ind og ud af rx og tx
-
 
 //UART CONTROL / STATUS:
 //UARTRSR / ECR - receive status - error clear register
@@ -122,10 +120,8 @@ INT16S UART0_SignedINT16_receive(){
 //UARTLCRH - line control register
 //UARTCTL - control register
 
-
 //u0RX - receive - PA0
 //u0TX - transmit - PA1
-
 
 //page 893 - uart pin nr
 //Before any uart registers can be programmed the UARTEN (enable) bit in the UARTCTL register
@@ -138,11 +134,8 @@ INT16S UART0_SignedINT16_receive(){
 
 //data transmission page 895
 
-//page 898 - FIFO operation - hvad er dette?? og hvad siger 16x8
+//page 898 - FIFO operation
 
 //page 902 - uart register map
 
-
 //DATA transmission page 895
-//the busy bit in uartFR (flag register) is set when transmitting data
-
