@@ -23,7 +23,7 @@ end entity state_test;
 
 architecture Behavioral of state_test is
 
-    type STATE_TYPE is (s_idle, s_receive, s_transmit, s_receive_complete);
+    type STATE_TYPE is (s_idle, s_receive);
     signal current_state : STATE_TYPE := s_idle;
     signal next_state : STATE_TYPE := s_idle;
     signal bit_cnt : UNSIGNED(2 downto 0) := (others => '0');
@@ -58,16 +58,6 @@ begin
                     receive_reg <= receive_reg(data_width-2 downto 0) & mosi;
                     bit_cnt <= bit_cnt + 1;
                 
-                when s_receive_complete =>
-                    
-                   --bit_cnt <= (others => '0');
-                   --transmit_reg <= data_to_send;
-                   
-                when s_transmit =>
-                    --if(bit_cnt > 0) then
-                      --  transmit_reg <= transmit_reg(data_width-2 downto 0) & '0';
-                    --end if;
-                    bit_cnt <= bit_cnt + 1;
                     
                 when others =>
                     null;
@@ -99,15 +89,7 @@ begin
                 if (bit_cnt = 7) then
                     next_state  <=  s_idle;              -- Use conditional logic based on input 
                 end if;    
-           
-            when s_receive_complete =>
-                next_state <= s_idle;
-                --next_state <= s_transmit;
-                 
-            when s_transmit =>
-            	--if (bit_cnt = 3) then
-            	    next_state <= s_idle;
-            	--end if;
+
             when s_idle =>
                 --Gå videre til receive ved ss=0
                 --Ændrer evt. ss til at tjekke falling edge
@@ -138,14 +120,7 @@ begin
             when s_receive =>
                 state_test <= "01";
                 cnt_out <= std_logic_vector(bit_cnt);
-                 
-            when s_receive_complete =>
-                state_test <= "10";
 
-               
-            when s_transmit =>
-                state_test <= "11";
-                --miso <= transmit_reg(data_width-1);
             when s_idle =>
             	state_test <= "00";
             	cnt_out <= std_logic_vector(bit_cnt);
