@@ -1,15 +1,36 @@
 import cv2
 import numpy as np
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(4)
+
+#Print resolution
+print(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+print(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+
+#Set framerate to 30 FPS
+cap.set(cv2.CAP_PROP_FPS, 30)
+
+#print fps
+print(cap.get(cv2.CAP_PROP_FPS))
+
+
 measurementsx = []
 measurementsy = []
 
 while(True):
 
     #Make live video feed
-    frame = cap.read()[1]
+    frame = cap.read()[1]    
     
+    # Adjust color balance - new camera colour temperatures are too cold
+   # b, g, r = cv2.split(frame)
+   # r = r - 20
+   # r = np.clip(r, 0, 255)
+   # b = b + 10
+   # b = np.clip(b, 0, 255)
+   # frame = cv2.merge((b, g, r))
+    
+    #Convert to hsv
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
 
     #Errode
@@ -57,15 +78,6 @@ while(True):
     else:
         measurementsx.clear()
         measurementsy.clear()
-    
-    
-       
-
-      
-            
-        
-        
-        
 
 
     if len(measurementsx) > 4:
@@ -82,9 +94,11 @@ while(True):
 
     #print(len(measurementsx))
 
-    #draw a box on the image that is close to the edges but not all the way
-    cv2.rectangle(frame, (100, 80), (540, 400), (255, 0, 0), 2)
+    #draw box that the ball should stay in
+    cv2.rectangle(frame, (150, 120), (490, 360), (255, 0, 0), 2)
     
+    #draw line from top to bottom of the image in center
+    #cv2.line(frame, (320, 0), (320, 480), (0, 255, 0), 2) 
 
     cv2.imshow('frame', frame)
     if(cv2.waitKey(1) & 0xFF == ord('q')):

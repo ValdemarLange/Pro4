@@ -20,9 +20,12 @@ int main(void)
     uart0_init(9600, 8, 1, 'n'); //9600 baud rate, 8 data bits, 1 stop bit, no parity
     
     while(1) {
-        val2 = SPI_send_and_receive(val1);
-        writeMessage("Value received from SPI: ");
-        sendIntOverUART(val2);
+        SPI1_Write(val1);
+        Delay_ms(100);
+
+        //val2 = SPI_send_and_receive(val1);
+        //writeMessage("Value received from SPI: ");
+        //sendIntOverUART(val2);
     }
 }
 
