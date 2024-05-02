@@ -14,8 +14,10 @@ entity state_test is
     
     state_test : out std_logic_vector(1 downto 0) := "00";
     cnt_out : out std_logic_vector(2 downto 0);
+    
     --transmit register
     data_to_send : in std_logic_vector(data_width-1 downto 0);
+    
     --receive register
     data_received: out std_logic_vector(data_width-1 downto 0)
   );
@@ -27,12 +29,9 @@ architecture Behavioral of state_test is
     signal current_state : STATE_TYPE := s_idle;
     signal next_state : STATE_TYPE := s_idle;
     signal bit_cnt : UNSIGNED(2 downto 0) := (others => '0');
-   -- signal bit_cnt_temp : UNSIGNED(1 downto 0) := (others => '0'); 
-  signal receive_reg : std_logic_vector(data_width-1 downto 0) := (others => '0');  -- Shift register for received
-  signal transmit_reg : std_logic_vector(data_width-1 downto 0) := (others => '0');  -- Shift register for transmitted data
-  
-  signal unstable_clock, prev_clock, current_clock : std_logic;
-  signal unstable_ss, current_ss : std_logic;  
+   
+    signal receive_reg : std_logic_vector(data_width-1 downto 0) := (others => '0');  -- Shift register for received
+    signal transmit_reg : std_logic_vector(data_width-1 downto 0) := (others => '0');  -- Shift register for transmitted data
     
     
 begin
@@ -53,18 +52,18 @@ begin
                 when s_idle =>
                     bit_cnt <= (others => '0'); --Reset variables eller
                     --receive_reg <= (others => '0'); --Clear shift reg
-                    
+                    transmit_reg <= data_to_send;
                 when s_receive =>
-                    receive_reg <= receive_reg(data_width-2 downto 0) & mosi;
+                    receive_reg <= receive_reg(data_width-2 downto 0) & mosi;                    
+                    transmit_reg <= transmit_reg(data_width-2 downto 0) & '0';
                     bit_cnt <= bit_cnt + 1;
-                
                     
                 when others =>
                     null;
             end case;
         end if;
         
-  
+
 
 
        
@@ -108,7 +107,7 @@ begin
 
 
     ------------------------------------------------------------------------------
-    output_logic        :   process(current_state) --transmit_reg, receive_reg)
+    output_logic        :   process(current_state, sclk, ss) --transmit_reg, receive_reg)
     ------------------------------------------------------------------------------
     -- Output logic process. Here goes output assignments. 
     -- Sensitive to state change only.
@@ -120,11 +119,20 @@ begin
             when s_receive =>
                 state_test <= "01";
                 cnt_out <= std_logic_vector(bit_cnt);
-
+                
+                if(rising_edge (sclk)) then                 
+                    miso <= transmit_reg(data_width-1);
+                end if;
+                
             when s_idle =>
             	state_test <= "00";
             	cnt_out <= std_logic_vector(bit_cnt);
             	data_received <= receive_reg;
+            	
+            if(ss='1') then
+               miso <= '0';
+            end if;
+            	
             when others =>
                 null;
         end case;
