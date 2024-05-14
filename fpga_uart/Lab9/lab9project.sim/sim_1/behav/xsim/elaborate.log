@@ -1,0 +1,25 @@
+Vivado Simulator v2023.2.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot uart_block_wrapper_behav xil_defaultlib.uart_block_wrapper -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_arith
+Compiling architecture behavioral of entity xil_defaultlib.clk_divider_emad [clk_divider_emad_default]
+Compiling architecture uart_block_clk_divider_emad_0_0_arch of entity xil_defaultlib.uart_block_clk_divider_emad_0_0 [uart_block_clk_divider_emad_0_0_...]
+Compiling architecture rtl of entity xil_defaultlib.d_latch [d_latch_default]
+Compiling architecture uart_block_d_latch_0_0_arch of entity xil_defaultlib.uart_block_d_latch_0_0 [uart_block_d_latch_0_0_default]
+Compiling architecture rtl of entity xil_defaultlib.rx_mod [rx_mod_default]
+Compiling architecture uart_block_rx_mod_0_0_arch of entity xil_defaultlib.uart_block_rx_mod_0_0 [uart_block_rx_mod_0_0_default]
+Compiling architecture structure of entity xil_defaultlib.uart_block [uart_block_default]
+Compiling architecture structure of entity xil_defaultlib.uart_block_wrapper
+Built simulation snapshot uart_block_wrapper_behav

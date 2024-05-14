@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" -L "xpm" --snapshot "uart_block_wrapper_behav" "xil_defaultlib.uart_block_wrapper" -log "elaborate.log" 

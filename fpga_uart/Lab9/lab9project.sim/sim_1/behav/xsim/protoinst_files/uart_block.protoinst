@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"uart_block": {
+			"proto_instances": {
+			}
+		}
+	}
+}

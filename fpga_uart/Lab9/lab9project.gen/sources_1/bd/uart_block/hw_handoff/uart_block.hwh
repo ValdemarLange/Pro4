@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue May 14 15:28:48 2024" VIVADOVERSION="2023.2.2">
+
+  <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="uart_block" PACKAGE="clg400" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="I" NAME="btn0" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_btn0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="rx_mod_0" PORT="rst"/>
+        <CONNECTION INSTANCE="clk_divider_emad_0" PORT="rst"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="clk_divider_emad_0" PORT="clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="7" NAME="led" RIGHT="0" SIGIS="undef" SIGNAME="d_latch_0_Q">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="d_latch_0" PORT="Q"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="txd" SIGIS="undef" SIGNAME="External_Ports_txd">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="rx_mod_0" PORT="sin"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1715174012" FULLNAME="/clk_divider_emad_0" HWVERSION="1.0" INSTANCE="clk_divider_emad_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clk_divider_emad" VLNV="xilinx.com:module_ref:clk_divider_emad:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="uart_block_clk_divider_emad_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="clk_div" SIGIS="undef" SIGNAME="clk_divider_emad_0_clk_div">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rx_mod_0" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_btn0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="btn0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1715693225" FULLNAME="/d_latch_0" HWVERSION="1.0" INSTANCE="d_latch_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="d_latch" VLNV="xilinx.com:module_ref:d_latch:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="n_bits" VALUE="8"/>
+        <PARAMETER NAME="Component_Name" VALUE="uart_block_d_latch_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="D" RIGHT="0" SIGIS="undef" SIGNAME="rx_mod_0_data_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rx_mod_0" PORT="data_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="Q" RIGHT="0" SIGIS="undef" SIGNAME="d_latch_0_Q">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="led"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="en" SIGIS="undef" SIGNAME="rx_mod_0_intr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rx_mod_0" PORT="intr"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1715172584" FULLNAME="/rx_mod_0" HWVERSION="1.0" INSTANCE="rx_mod_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="rx_mod" VLNV="xilinx.com:module_ref:rx_mod:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="uart_block_rx_mod_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_divider_emad_0_clk_div">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_divider_emad_0" PORT="clk_div"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="data_out" RIGHT="0" SIGIS="undef" SIGNAME="rx_mod_0_data_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="d_latch_0" PORT="D"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="intr" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="rx_mod_0_intr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="d_latch_0" PORT="en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_btn0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="btn0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sin" SIGIS="undef" SIGNAME="External_Ports_txd">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="txd"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

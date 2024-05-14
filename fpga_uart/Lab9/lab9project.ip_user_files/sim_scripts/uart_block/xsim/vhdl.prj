@@ -1,0 +1,8 @@
+vhdl xil_defaultlib  \
+"../../../bd/uart_block/ip/uart_block_rx_mod_0_0/sim/uart_block_rx_mod_0_0.vhd" \
+"../../../bd/uart_block/ip/uart_block_clk_divider_emad_0_0/sim/uart_block_clk_divider_emad_0_0.vhd" \
+"../../../bd/uart_block/ip/uart_block_d_latch_0_0/sim/uart_block_d_latch_0_0.vhd" \
+"../../../bd/uart_block/sim/uart_block.vhd" \
+
+# Do not sort compile order
+nosort
