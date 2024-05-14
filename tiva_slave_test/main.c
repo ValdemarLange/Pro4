@@ -3,7 +3,6 @@
 #include <stdint.h>
 #include "tm4c123gh6pm.h"
 #include "emp_type.h"
-#include "uart0.h"
 
 /* function prototype of SPI and Delay */
 void SPI1_init(void);
@@ -17,28 +16,11 @@ int main(void)
     unsigned int val1 = 12;
     unsigned int val2;
     SPI1_init();
-    uart0_init(9600, 8, 1, 'n'); //9600 baud rate, 8 data bits, 1 stop bit, no parity
     
     while(1) {
-        SPI1_Write(val1);
-        Delay_ms(100);
-
-        //val2 = SPI_send_and_receive(val1);
-        //writeMessage("Value received from SPI: ");
-        //sendIntOverUART(val2);
+        val2 = SPI1_Read();
+        SPI1_Write(val2);
     }
-}
-
-
-unsigned int SPI_send_and_receive(unsigned int data)
-{
-    unsigned int data;
-    GPIO_PORTF_DATA_R &= ~(1<<2);       /* Make PF2 Selection line (SS) low */
-    SPI1_Write(data);
-    Delay_ms(100);
-    data = SPI1_Read();
-    GPIO_PORTF_DATA_R |= 0x04;        /* keep selection line (PF2) high in idle condition */
-    return data;
 }
 
 
@@ -78,12 +60,11 @@ void SPI1_init(void)
     /* Initialize PF2 as a digital output as a slave select pin */
 
     GPIO_PORTF_DEN_R |= (1<<2);         /* set PF2 pin digital */
-    GPIO_PORTF_DIR_R |= (1<<2);         /* set PF2 pin output */
-    GPIO_PORTF_DATA_R |= (1<<2);        /* keep SS idle high */
+    GPIO_PORTF_DIR_R &= ~(1<<2);         /* set PF2 pin input */
 
     /* Select SPI1 as a Master, POL = 1, PHA = 0, clock = 4 MHz, 8 bit data */
 
-    SSI1_CR1_R = 0;          /* disable SPI1 and configure it as a Master */
+    SSI1_CR1_R = 0x04;          /* disable SPI1 and configure it as a slave */
     SSI1_CC_R = 0;           /* Enable System clock Option */
     SSI1_CPSR_R = 0;         /* Select prescaler value of 0 .i.e 16MHz */
     SSI1_CR0_R  = 0x00003;     /* 4MHz SPI1 clock, SPI mode 0, 4 bit data */
