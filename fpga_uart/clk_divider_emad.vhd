@@ -42,7 +42,7 @@ signal divisor: unsigned(9 downto 0);
 signal count_sig: unsigned(7 downto 0);
 signal clk_div_sig: std_logic :='1';
 begin
-    divisor<="1100101110"; --68 (max number 255)
+    divisor<="0001000100"; --68 (max number 255)
 -----------------------------------------------------------
     process(clk, rst)
 -----------------------------------------------------------
