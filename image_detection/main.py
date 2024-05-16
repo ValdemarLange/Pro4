@@ -109,7 +109,8 @@ while(True):
                 maxRadius = radius
                 maxCenter = center
     
-    if maxRadius > 0:        
+    if maxRadius > 0:     
+        print(f"max radius: {maxRadius}")   
         cv2.circle(frame, maxCenter, maxRadius, (0, 255, 0), 2)
         measurementsx.append(maxCenter[0])
         measurementsy.append(maxCenter[1]) 
