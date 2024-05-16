@@ -1,0 +1,49 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "uart_block_d_latch_0_0",
+    "cell_name": "d_latch_0",
+    "component_reference": "xilinx.com:module_ref:d_latch:1.0",
+    "ip_revision": "1715693225",
+    "gen_directory": "../../../../../../lab9project.gen/sources_1/bd/uart_block/ip/uart_block_d_latch_0_0",
+    "parameters": {
+      "component_parameters": {
+        "n_bits": [ { "value": "8", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "Component_Name": [ { "value": "uart_block_d_latch_0_0", "resolve_type": "user", "usage": "all" } ]
+      },
+      "model_parameters": {
+        "n_bits": [ { "value": "8", "resolve_type": "generated", "format": "long", "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "zynq" } ],
+        "BASE_BOARD_PART": [ { "value": "tul.com.tw:pynq-z2:part0:1.0" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xc7z020" } ],
+        "PACKAGE": [ { "value": "clg400" } ],
+        "PREFHDL": [ { "value": "VHDL" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
+        "SPEEDGRADE": [ { "value": "-1" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Integrator" } ],
+        "IPREVISION": [ { "value": "1715693225" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../lab9project.gen/sources_1/bd/uart_block/ip/uart_block_d_latch_0_0" } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "../../ipshared" } ],
+        "SWVERSION": [ { "value": "2023.2.2" } ],
+        "SYNTHESISFLOW": [ { "value": "OOC_HIERARCHICAL" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "en": [ { "direction": "in" } ],
+        "D": [ { "direction": "in", "size_left": "7", "size_right": "0" } ],
+        "Q": [ { "direction": "out", "size_left": "7", "size_right": "0" } ]
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/repo/d_latch.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'd_latch'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/Lab9/lab9project.ip_user_files/bd/uart_block/ip/uart_block_d_latch_0_0/sim/uart_block_d_latch_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'uart_block_d_latch_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/Lab9/lab9project.ip_user_files/bd/uart_block/sim/uart_block.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'uart_block'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/Lab9/lab9project.gen/sources_1/bd/uart_block/hdl/uart_block_wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'uart_block_wrapper'

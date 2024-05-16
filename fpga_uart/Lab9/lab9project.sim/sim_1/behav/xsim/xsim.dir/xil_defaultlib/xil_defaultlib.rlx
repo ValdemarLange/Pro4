@@ -1,0 +1,12 @@
+0.7
+2020.2
+Feb  9 2024
+00:36:40
+C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/Lab9/lab9project.gen/sources_1/bd/uart_block/hdl/uart_block_wrapper.vhd,1715693328,vhdl,,,,uart_block_wrapper,,,,,,,,
+C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/Lab9/lab9project.ip_user_files/bd/uart_block/ip/uart_block_clk_divider_emad_0_0/sim/uart_block_clk_divider_emad_0_0.vhd,1715174058,vhdl,,,,uart_block_clk_divider_emad_0_0,,,,,,,,
+C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/Lab9/lab9project.ip_user_files/bd/uart_block/ip/uart_block_d_latch_0_0/sim/uart_block_d_latch_0_0.vhd,1715693328,vhdl,,,,uart_block_d_latch_0_0,,,,,,,,
+C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/Lab9/lab9project.ip_user_files/bd/uart_block/ip/uart_block_rx_mod_0_0/sim/uart_block_rx_mod_0_0.vhd,1715173332,vhdl,,,,uart_block_rx_mod_0_0,,,,,,,,
+C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/Lab9/lab9project.ip_user_files/bd/uart_block/sim/uart_block.vhd,1715693328,vhdl,,,,uart_block,,,,,,,,
+C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/repo/clk_divider_emad.vhd,1715174011,vhdl,,,,clk_divider_emad,,,,,,,,
+C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/repo/d_latch.vhd,1715693221,vhdl,,,,d_latch,,,,,,,,
+C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/repo/rx_mod_rtl.vhd,1714567564,vhdl,,,,rx_mod,,,,,,,,

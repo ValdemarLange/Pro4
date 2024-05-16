@@ -1,0 +1,249 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x70E2BB62056E64A1",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../lab9project.gen/sources_1/bd/uart_block",
+      "name": "uart_block",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.2.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "rx_mod_0": "",
+      "clk_divider_emad_0": "",
+      "d_latch_0": ""
+    },
+    "ports": {
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "btn0",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "uart_block_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "btn0": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "txd": {
+        "direction": "I"
+      },
+      "led": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      }
+    },
+    "components": {
+      "rx_mod_0": {
+        "vlnv": "xilinx.com:module_ref:rx_mod:1.0",
+        "ip_revision": "1715172584",
+        "xci_name": "uart_block_rx_mod_0_0",
+        "xci_path": "ip\\uart_block_rx_mod_0_0\\uart_block_rx_mod_0_0.xci",
+        "inst_hier_path": "rx_mod_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "rx_mod",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "uart_block_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "sin": {
+            "direction": "I"
+          },
+          "data_out": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "intr": {
+            "type": "intr",
+            "direction": "O",
+            "parameters": {
+              "SENSITIVITY": {
+                "value": "LEVEL_HIGH",
+                "value_src": "constant"
+              },
+              "PortWidth": {
+                "value": "1",
+                "value_src": "default_prop"
+              }
+            }
+          }
+        }
+      },
+      "clk_divider_emad_0": {
+        "vlnv": "xilinx.com:module_ref:clk_divider_emad:1.0",
+        "ip_revision": "1715174012",
+        "xci_name": "uart_block_clk_divider_emad_0_0",
+        "xci_path": "ip\\uart_block_clk_divider_emad_0_0\\uart_block_clk_divider_emad_0_0.xci",
+        "inst_hier_path": "clk_divider_emad_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "clk_divider_emad",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "uart_block_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk_div": {
+            "direction": "O"
+          }
+        }
+      },
+      "d_latch_0": {
+        "vlnv": "xilinx.com:module_ref:d_latch:1.0",
+        "ip_revision": "1715693225",
+        "xci_name": "uart_block_d_latch_0_0",
+        "xci_path": "ip\\uart_block_d_latch_0_0\\uart_block_d_latch_0_0.xci",
+        "inst_hier_path": "d_latch_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "d_latch",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "en": {
+            "direction": "I",
+            "parameters": {
+              "SENSITIVITY": {
+                "value": "LEVEL_HIGH",
+                "value_src": "const_prop"
+              },
+              "PortWidth": {
+                "value": "1",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "D": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "Q": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "btn0_1": {
+        "ports": [
+          "btn0",
+          "rx_mod_0/rst",
+          "clk_divider_emad_0/rst"
+        ]
+      },
+      "clk_1": {
+        "ports": [
+          "clk",
+          "clk_divider_emad_0/clk"
+        ]
+      },
+      "clk_divider_emad_0_clk_div": {
+        "ports": [
+          "clk_divider_emad_0/clk_div",
+          "rx_mod_0/clk"
+        ]
+      },
+      "d_latch_0_o": {
+        "ports": [
+          "d_latch_0/Q",
+          "led"
+        ]
+      },
+      "rx_mod_0_data_out": {
+        "ports": [
+          "rx_mod_0/data_out",
+          "d_latch_0/D"
+        ]
+      },
+      "rx_mod_0_intr": {
+        "ports": [
+          "rx_mod_0/intr",
+          "d_latch_0/en"
+        ]
+      },
+      "sin_1": {
+        "ports": [
+          "txd",
+          "rx_mod_0/sin"
+        ]
+      }
+    }
+  }
+}
