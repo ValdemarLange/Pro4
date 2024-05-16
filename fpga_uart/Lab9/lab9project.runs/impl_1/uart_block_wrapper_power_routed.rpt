@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.2.2 (win64) Build 4126759 Thu Feb  8 23:53:51 MST 2024
-| Date             : Wed May  8 15:36:44 2024
+| Date             : Wed May 15 15:39:33 2024
 | Host             : Amh2 running 64-bit major release  (build 9200)
 | Command          : report_power -file uart_block_wrapper_power_routed.rpt -pb uart_block_wrapper_power_summary_routed.pb -rpx uart_block_wrapper_power_routed.rpx
 | Design           : uart_block_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.107        |
+| Total On-Chip Power (W)  | 0.108        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.001        |
+| Dynamic (W)              | 0.002        |
 | Device Static (W)        | 0.106        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 83.8         |
@@ -53,14 +53,15 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |       71 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       20 |     53200 |            0.04 |
-|   Register     |    <0.001 |       35 |    106400 |            0.03 |
-|   Others       |     0.000 |        5 |       --- |             --- |
-| Signals        |    <0.001 |       44 |       --- |             --- |
-| I/O            |    <0.001 |       11 |       125 |            8.80 |
+| Slice Logic    |    <0.001 |      141 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       40 |     53200 |            0.08 |
+|   Register     |    <0.001 |       68 |    106400 |            0.06 |
+|   BUFG         |    <0.001 |        1 |        32 |            3.13 |
+|   Others       |     0.000 |        9 |       --- |             --- |
+| Signals        |    <0.001 |       91 |       --- |             --- |
+| I/O            |     0.001 |       12 |       125 |            9.60 |
 | Static Power   |     0.106 |          |           |                 |
-| Total          |     0.107 |          |           |                 |
+| Total          |     0.108 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -70,7 +71,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.008 |       0.001 |      0.007 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.009 |       0.001 |      0.007 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.010 |       0.000 |      0.010 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -146,7 +147,8 @@ Table of Contents
 +--------------------+-----------+
 | Name               | Power (W) |
 +--------------------+-----------+
-| uart_block_wrapper |     0.001 |
+| uart_block_wrapper |     0.002 |
+|   uart_block_i     |     0.001 |
 +--------------------+-----------+
 
 

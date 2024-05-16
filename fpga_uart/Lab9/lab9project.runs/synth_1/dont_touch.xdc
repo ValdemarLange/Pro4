@@ -15,4 +15,10 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==uart_block_
 # IP: bd/uart_block/ip/uart_block_d_latch_0_0/uart_block_d_latch_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==uart_block_d_latch_0_0 || ORIG_REF_NAME==uart_block_d_latch_0_0} -quiet] -quiet
 
+# IP: bd/uart_block/ip/uart_block_uart_loop_mod_0_0/uart_block_uart_loop_mod_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==uart_block_uart_loop_mod_0_0 || ORIG_REF_NAME==uart_block_uart_loop_mod_0_0} -quiet] -quiet
+
+# IP: bd/uart_block/ip/uart_block_tx_mod_0_1/uart_block_tx_mod_0_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==uart_block_tx_mod_0_1 || ORIG_REF_NAME==uart_block_tx_mod_0_1} -quiet] -quiet
+
 # XDC: c:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/Lab9/lab9project.gen/sources_1/bd/uart_block/uart_block_ooc.xdc

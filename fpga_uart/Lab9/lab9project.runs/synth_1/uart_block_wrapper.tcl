@@ -89,7 +89,7 @@ set_property ip_output_repo c:/Users/aksel/OneDrive/Skrivebord/4-semester/Digita
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib c:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/Lab9/lab9project.gen/sources_1/bd/uart_block/hdl/uart_block_wrapper.vhd
+read_vhdl -library xil_defaultlib C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/Lab9/lab9project.gen/sources_1/bd/uart_block/hdl/uart_block_wrapper.vhd
 add_files C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/Lab9/lab9project.srcs/sources_1/bd/uart_block/uart_block.bd
 set_property used_in_implementation false [get_files -all c:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/Lab9/lab9project.gen/sources_1/bd/uart_block/uart_block_ooc.xdc]
 

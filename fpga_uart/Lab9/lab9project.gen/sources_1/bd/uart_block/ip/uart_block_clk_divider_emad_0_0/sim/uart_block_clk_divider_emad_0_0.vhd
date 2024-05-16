@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:module_ref:clk_divider_emad:1.0
--- IP Revision: 1715174012
+-- IP Revision: 1715780150
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;

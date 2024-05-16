@@ -2,7 +2,7 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.2.2 (win64) Build 4126759 Thu Feb  8 23:53:51 MST 2024
---Date        : Tue May 14 15:28:48 2024
+--Date        : Wed May 15 15:36:08 2024
 --Host        : Amh2 running 64-bit major release  (build 9200)
 --Command     : generate_target uart_block_wrapper.bd
 --Design      : uart_block_wrapper
@@ -17,6 +17,7 @@ entity uart_block_wrapper is
     btn0 : in STD_LOGIC;
     clk : in STD_LOGIC;
     led : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    rxd : out STD_LOGIC;
     txd : in STD_LOGIC
   );
 end uart_block_wrapper;
@@ -27,7 +28,8 @@ architecture STRUCTURE of uart_block_wrapper is
     clk : in STD_LOGIC;
     btn0 : in STD_LOGIC;
     txd : in STD_LOGIC;
-    led : out STD_LOGIC_VECTOR ( 7 downto 0 )
+    led : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    rxd : out STD_LOGIC
   );
   end component uart_block;
 begin
@@ -36,6 +38,7 @@ uart_block_i: component uart_block
       btn0 => btn0,
       clk => clk,
       led(7 downto 0) => led(7 downto 0),
+      rxd => rxd,
       txd => txd
     );
 end STRUCTURE;

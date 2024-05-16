@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:module_ref:clk_divider_emad:1.0
--- IP Revision: 1715174012
+-- IP Revision: 1715780150
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -76,7 +76,7 @@ ARCHITECTURE uart_block_clk_divider_emad_0_0_arch OF uart_block_clk_divider_emad
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF uart_block_clk_divider_emad_0_0_arch : ARCHITECTURE IS "uart_block_clk_divider_emad_0_0,clk_divider_emad,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF uart_block_clk_divider_emad_0_0_arch: ARCHITECTURE IS "uart_block_clk_divider_emad_0_0,clk_divider_emad,{x_ipProduct=Vivado 2023.2.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=clk_divider_emad,x_ipVersion=1.0,x_ipCoreRevision=1715174012,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED}";
+  ATTRIBUTE CORE_GENERATION_INFO OF uart_block_clk_divider_emad_0_0_arch: ARCHITECTURE IS "uart_block_clk_divider_emad_0_0,clk_divider_emad,{x_ipProduct=Vivado 2023.2.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=clk_divider_emad,x_ipVersion=1.0,x_ipCoreRevision=1715780150,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED}";
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
   ATTRIBUTE IP_DEFINITION_SOURCE OF uart_block_clk_divider_emad_0_0_arch: ARCHITECTURE IS "module_ref";
   ATTRIBUTE X_INTERFACE_INFO : STRING;

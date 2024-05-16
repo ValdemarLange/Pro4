@@ -3,8 +3,8 @@
 # SW Build 4126759 on Thu Feb  8 23:53:51 MST 2024
 # IP Build 4126054 on Fri Feb  9 11:39:09 MST 2024
 # SharedData Build 4115275 on Tue Jan 30 00:40:57 MST 2024
-# Start of session at: Wed May  8 15:34:55 2024
-# Process ID: 15640
+# Start of session at: Wed May 15 15:37:14 2024
+# Process ID: 14436
 # Current directory: C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/Lab9/lab9project.runs/synth_1
 # Command line: vivado.exe -log uart_block_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source uart_block_wrapper.tcl
 # Log file: C:/Users/aksel/OneDrive/Skrivebord/4-semester/DigitalProgrammerbarElektronik/Lab9/lab9project.runs/synth_1/uart_block_wrapper.vds

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2023.2.2 (win64) Build 4126759 Thu Feb  8 23:53:51 MST 2024
-| Date                      : Wed May  8 15:36:17 2024
+| Date                      : Wed May 15 15:38:57 2024
 | Host                      : Amh2 running 64-bit major release  (build 9200)
 | Command                   : report_io -file uart_block_wrapper_io_placed.rpt
 | Design                    : uart_block_wrapper
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            11 |
+|            12 |
 +---------------+
 
 
@@ -428,7 +428,7 @@ Table of Contents
 | Y11        |             | High Range | IO_L18N_T2_13           | User IO     |             |      13 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | Y12        |             | High Range | IO_L20P_T3_13           | User IO     |             |      13 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | Y13        |             | High Range | IO_L20N_T3_13           | User IO     |             |      13 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| Y14        |             | High Range | IO_L8N_T1_34            | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| Y14        | rxd         | High Range | IO_L8N_T1_34            | OUTPUT      | LVCMOS33    |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | Y15        |             |            | GND                     | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | Y16        |             | High Range | IO_L7P_T1_34            | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | Y17        |             | High Range | IO_L7N_T1_34            | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |

@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x70E2BB62056E64A1",
+      "boundary_crc": "0xEA27EDB480C2B927",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../lab9project.gen/sources_1/bd/uart_block",
       "name": "uart_block",
@@ -13,7 +13,9 @@
     "design_tree": {
       "rx_mod_0": "",
       "clk_divider_emad_0": "",
-      "d_latch_0": ""
+      "d_latch_0": "",
+      "uart_loop_mod_0": "",
+      "tx_mod_0": ""
     },
     "ports": {
       "clk": {
@@ -66,6 +68,9 @@
         "direction": "O",
         "left": "7",
         "right": "0"
+      },
+      "rxd": {
+        "direction": "O"
       }
     },
     "components": {
@@ -125,7 +130,7 @@
       },
       "clk_divider_emad_0": {
         "vlnv": "xilinx.com:module_ref:clk_divider_emad:1.0",
-        "ip_revision": "1715174012",
+        "ip_revision": "1715780150",
         "xci_name": "uart_block_clk_divider_emad_0_0",
         "xci_path": "ip\\uart_block_clk_divider_emad_0_0\\uart_block_clk_divider_emad_0_0.xci",
         "inst_hier_path": "clk_divider_emad_0",
@@ -198,6 +203,92 @@
             "right": "0"
           }
         }
+      },
+      "uart_loop_mod_0": {
+        "vlnv": "xilinx.com:module_ref:uart_loop_mod:1.0",
+        "ip_revision": "1715778816",
+        "xci_name": "uart_block_uart_loop_mod_0_0",
+        "xci_path": "ip\\uart_block_uart_loop_mod_0_0\\uart_block_uart_loop_mod_0_0.xci",
+        "inst_hier_path": "uart_loop_mod_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "uart_loop_mod",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clkfast": {
+            "direction": "I"
+          },
+          "data_out": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "intr": {
+            "type": "intr",
+            "direction": "I",
+            "parameters": {
+              "SENSITIVITY": {
+                "value": "LEVEL_HIGH",
+                "value_src": "constant"
+              },
+              "PortWidth": {
+                "value": "1",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "xmitmt": {
+            "direction": "I"
+          },
+          "data_in": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "shift_load": {
+            "direction": "O"
+          }
+        }
+      },
+      "tx_mod_0": {
+        "vlnv": "xilinx.com:module_ref:tx_mod:1.0",
+        "ip_revision": "1715777293",
+        "xci_name": "uart_block_tx_mod_0_1",
+        "xci_path": "ip\\uart_block_tx_mod_0_1\\uart_block_tx_mod_0_1.xci",
+        "inst_hier_path": "tx_mod_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "tx_mod",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clkfast": {
+            "direction": "I"
+          },
+          "data_in": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "shift_load": {
+            "direction": "I"
+          },
+          "sout": {
+            "direction": "O"
+          },
+          "xmitmt": {
+            "direction": "O"
+          }
+        }
       }
     },
     "nets": {
@@ -205,6 +296,8 @@
         "ports": [
           "btn0",
           "rx_mod_0/rst",
+          "uart_loop_mod_0/rst",
+          "tx_mod_0/rst",
           "clk_divider_emad_0/rst"
         ]
       },
@@ -217,10 +310,12 @@
       "clk_divider_emad_0_clk_div": {
         "ports": [
           "clk_divider_emad_0/clk_div",
-          "rx_mod_0/clk"
+          "rx_mod_0/clk",
+          "uart_loop_mod_0/clkfast",
+          "tx_mod_0/clkfast"
         ]
       },
-      "d_latch_0_o": {
+      "d_latch_0_Q": {
         "ports": [
           "d_latch_0/Q",
           "led"
@@ -229,12 +324,14 @@
       "rx_mod_0_data_out": {
         "ports": [
           "rx_mod_0/data_out",
-          "d_latch_0/D"
+          "d_latch_0/D",
+          "uart_loop_mod_0/data_out"
         ]
       },
       "rx_mod_0_intr": {
         "ports": [
           "rx_mod_0/intr",
+          "uart_loop_mod_0/intr",
           "d_latch_0/en"
         ]
       },
@@ -242,6 +339,30 @@
         "ports": [
           "txd",
           "rx_mod_0/sin"
+        ]
+      },
+      "tx_mod_0_sout": {
+        "ports": [
+          "tx_mod_0/sout",
+          "rxd"
+        ]
+      },
+      "tx_mod_0_xmitmt": {
+        "ports": [
+          "tx_mod_0/xmitmt",
+          "uart_loop_mod_0/xmitmt"
+        ]
+      },
+      "uart_loop_mod_0_data_in": {
+        "ports": [
+          "uart_loop_mod_0/data_in",
+          "tx_mod_0/data_in"
+        ]
+      },
+      "uart_loop_mod_0_shift_load": {
+        "ports": [
+          "uart_loop_mod_0/shift_load",
+          "tx_mod_0/shift_load"
         ]
       }
     }

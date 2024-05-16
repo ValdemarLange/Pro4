@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2.2 (win64) Build 4126759 Thu Feb  8 23:53:51 MST 2024
-| Date         : Wed May  8 15:36:44 2024
+| Date         : Wed May 15 15:39:33 2024
 | Host         : Amh2 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file uart_block_wrapper_methodology_drc_routed.rpt -pb uart_block_wrapper_methodology_drc_routed.pb -rpx uart_block_wrapper_methodology_drc_routed.rpx
 | Design       : uart_block_wrapper
@@ -23,13 +23,15 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 28
+             Violations found: 62
 +-----------+------------------+------------------------------------------------------------------+------------+
 | Rule      | Severity         | Description                                                      | Violations |
 +-----------+------------------+------------------------------------------------------------------+------------+
-| TIMING-17 | Critical Warning | Non-clocked sequential cell                                      | 26         |
+| TIMING-17 | Critical Warning | Non-clocked sequential cell                                      | 58         |
 | CKLD-2    | Warning          | Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads | 1          |
 | TIMING-18 | Warning          | Missing input or output delay                                    | 1          |
+| TIMING-20 | Warning          | Non-clocked latch                                                | 1          |
+| LATCH-1   | Advisory         | Existing latches in the design                                   | 1          |
 +-----------+------------------+------------------------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -164,6 +166,166 @@ Non-clocked sequential cell
 The clock pin uart_block_i/rx_mod_0/U0/start_flag_reg/C is not reached by a timing clock
 Related violations: <none>
 
+TIMING-17#27 Critical Warning
+Non-clocked sequential cell  
+The clock pin uart_block_i/tx_mod_0/U0/FSM_sequential_current_state_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#28 Critical Warning
+Non-clocked sequential cell  
+The clock pin uart_block_i/tx_mod_0/U0/FSM_sequential_current_state_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#29 Critical Warning
+Non-clocked sequential cell  
+The clock pin uart_block_i/tx_mod_0/U0/FSM_sequential_current_state_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#30 Critical Warning
+Non-clocked sequential cell  
+The clock pin uart_block_i/tx_mod_0/U0/cnt_bit_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#31 Critical Warning
+Non-clocked sequential cell  
+The clock pin uart_block_i/tx_mod_0/U0/cnt_bit_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#32 Critical Warning
+Non-clocked sequential cell  
+The clock pin uart_block_i/tx_mod_0/U0/cnt_bit_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#33 Critical Warning
+Non-clocked sequential cell  
+The clock pin uart_block_i/tx_mod_0/U0/cnt_bit_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#34 Critical Warning
+Non-clocked sequential cell  
+The clock pin uart_block_i/tx_mod_0/U0/count_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#35 Critical Warning
+Non-clocked sequential cell  
+The clock pin uart_block_i/tx_mod_0/U0/count_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#36 Critical Warning
+Non-clocked sequential cell  
+The clock pin uart_block_i/tx_mod_0/U0/count_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#37 Critical Warning
+Non-clocked sequential cell  
+The clock pin uart_block_i/tx_mod_0/U0/count_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#38 Critical Warning
+Non-clocked sequential cell  
+The clock pin uart_block_i/tx_mod_0/U0/reg_data_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#39 Critical Warning
+Non-clocked sequential cell  
+The clock pin uart_block_i/tx_mod_0/U0/reg_data_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#40 Critical Warning
+Non-clocked sequential cell  
+The clock pin uart_block_i/tx_mod_0/U0/reg_data_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#41 Critical Warning
+Non-clocked sequential cell  
+The clock pin uart_block_i/tx_mod_0/U0/reg_data_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#42 Critical Warning
+Non-clocked sequential cell  
+The clock pin uart_block_i/tx_mod_0/U0/reg_data_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#43 Critical Warning
+Non-clocked sequential cell  
+The clock pin uart_block_i/tx_mod_0/U0/reg_data_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#44 Critical Warning
+Non-clocked sequential cell  
+The clock pin uart_block_i/tx_mod_0/U0/reg_data_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#45 Critical Warning
+Non-clocked sequential cell  
+The clock pin uart_block_i/tx_mod_0/U0/reg_data_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#46 Critical Warning
+Non-clocked sequential cell  
+The clock pin uart_block_i/tx_mod_0/U0/reg_data_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#47 Critical Warning
+Non-clocked sequential cell  
+The clock pin uart_block_i/tx_mod_0/U0/reg_data_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#48 Critical Warning
+Non-clocked sequential cell  
+The clock pin uart_block_i/uart_loop_mod_0/U0/FSM_onehot_current_state_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#49 Critical Warning
+Non-clocked sequential cell  
+The clock pin uart_block_i/uart_loop_mod_0/U0/FSM_onehot_current_state_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#50 Critical Warning
+Non-clocked sequential cell  
+The clock pin uart_block_i/uart_loop_mod_0/U0/FSM_onehot_current_state_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#51 Critical Warning
+Non-clocked sequential cell  
+The clock pin uart_block_i/uart_loop_mod_0/U0/uart_data_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#52 Critical Warning
+Non-clocked sequential cell  
+The clock pin uart_block_i/uart_loop_mod_0/U0/uart_data_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#53 Critical Warning
+Non-clocked sequential cell  
+The clock pin uart_block_i/uart_loop_mod_0/U0/uart_data_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#54 Critical Warning
+Non-clocked sequential cell  
+The clock pin uart_block_i/uart_loop_mod_0/U0/uart_data_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#55 Critical Warning
+Non-clocked sequential cell  
+The clock pin uart_block_i/uart_loop_mod_0/U0/uart_data_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#56 Critical Warning
+Non-clocked sequential cell  
+The clock pin uart_block_i/uart_loop_mod_0/U0/uart_data_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#57 Critical Warning
+Non-clocked sequential cell  
+The clock pin uart_block_i/uart_loop_mod_0/U0/uart_data_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#58 Critical Warning
+Non-clocked sequential cell  
+The clock pin uart_block_i/uart_loop_mod_0/U0/uart_data_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
 CKLD-2#1 Warning
 Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads  
 Clock net clk_IBUF is directly driven by an IO rather than a Clock Buffer or may be an IO driving a mix of Clock Buffer and non-Clock loads. This connectivity should be reviewed and corrected as appropriate. Driver(s): clk_IBUF_inst/O, uart_block_i/clk
@@ -172,6 +334,16 @@ Related violations: <none>
 TIMING-18#1 Warning
 Missing input or output delay  
 An input delay is missing on btn0 relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+Related violations: <none>
+
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch uart_block_i/uart_loop_mod_0/U0/shift_load_reg cannot be properly analyzed as its control pin uart_block_i/uart_loop_mod_0/U0/shift_load_reg/G is not reached by a timing clock
+Related violations: <none>
+
+LATCH-1#1 Advisory
+Existing latches in the design  
+There are 1 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
 Related violations: <none>
 
 

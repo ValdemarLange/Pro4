@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2.2 (win64) Build 4126759 Thu Feb  8 23:53:51 MST 2024
-| Date         : Wed May  8 15:36:43 2024
+| Date         : Wed May 15 15:39:32 2024
 | Host         : Amh2 running 64-bit major release  (build 9200)
 | Command      : report_drc -file uart_block_wrapper_drc_routed.rpt -pb uart_block_wrapper_drc_routed.pb -rpx uart_block_wrapper_drc_routed.rpx
 | Design       : uart_block_wrapper
@@ -24,15 +24,21 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 1
-+--------+----------+--------------------+------------+
-| Rule   | Severity | Description        | Violations |
-+--------+----------+--------------------+------------+
-| ZPS7-1 | Warning  | PS7 block required | 1          |
-+--------+----------+--------------------+------------+
+             Violations found: 2
++----------+----------+--------------------+------------+
+| Rule     | Severity | Description        | Violations |
++----------+----------+--------------------+------------+
+| PDRC-153 | Warning  | Gated clock check  | 1          |
+| ZPS7-1   | Warning  | PS7 block required | 1          |
++----------+----------+--------------------+------------+
 
 2. REPORT DETAILS
 -----------------
+PDRC-153#1 Warning
+Gated clock check  
+Net uart_block_i/uart_loop_mod_0/U0/shift_load_reg_i_1_n_0 is a gated clock net sourced by a combinational pin uart_block_i/uart_loop_mod_0/U0/shift_load_reg_i_1/O, cell uart_block_i/uart_loop_mod_0/U0/shift_load_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
 ZPS7-1#1 Warning
 PS7 block required  
 The PS7 cell must be used in this Zynq design in order to enable correct default configuration.

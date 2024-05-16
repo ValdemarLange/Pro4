@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="43">
   <CompositeFile CompositeFileTopName="uart_block" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1715693328"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1715693329"/>
-    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1715693328"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1715693329"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1715780169"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1715780169"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1715780169"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1715780169"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="synth\uart_block.vhd" Type="VHDL">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>

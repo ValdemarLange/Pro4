@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2.2 (win64) Build 4126759 Thu Feb  8 23:53:51 MST 2024
-| Date         : Wed May  8 15:35:37 2024
+| Date         : Wed May 15 15:38:09 2024
 | Host         : Amh2 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file uart_block_wrapper_utilization_synth.rpt -pb uart_block_wrapper_utilization_synth.pb
 | Design       : uart_block_wrapper
@@ -92,7 +92,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |   11 |     0 |          0 |       125 |  8.80 |
+| Bonded IOB                  |   12 |     0 |          0 |       125 |  9.60 |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |          0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         4 |  0.00 |
@@ -148,7 +148,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| OBUF     |    8 |                  IO |
+| OBUF     |    9 |                  IO |
 | IBUF     |    3 |                  IO |
 +----------+------+---------------------+
 
@@ -159,6 +159,8 @@ Warning! LUT value is adjusted to account for LUT combining.
 +---------------------------------+------+
 |             Ref Name            | Used |
 +---------------------------------+------+
+| uart_block_uart_loop_mod_0_0    |    1 |
+| uart_block_tx_mod_0_1           |    1 |
 | uart_block_rx_mod_0_0           |    1 |
 | uart_block_d_latch_0_0          |    1 |
 | uart_block_clk_divider_emad_0_0 |    1 |
