@@ -9,7 +9,7 @@ import csv
 #import math lib
 import math
 
-#ser = serial.Serial("/dev/ttyACM0",9600)
+ser = serial.Serial("/dev/ttyACM0",9600)
 
 # import kalman filter
 #from pykalman import KalmanFilter
@@ -203,7 +203,7 @@ while (True):
                 turnAngleHorizontal = int(math.degrees(math.atan2((maxCenter[0] - frameCenter[0]), bHorizontal)))
                 print(f"Go right by {turnAngleHorizontal}")
                 #Send angle over UART      
-                #ser.write((int(turnAngleHorizontal)).to_bytes(1, byteorder='big'))
+                ser.write((int(turnAngleHorizontal)).to_bytes(1, byteorder='big'))
                 
                 xErrorFromBox = maxCenter[0] - box_x_max
                 
@@ -223,7 +223,7 @@ while (True):
                 print(f"Go left by {turnAngleHorizontal}")
                 #Send angle over UART
                 turnAngleHorizontal |= (1<<6)
-                #ser.write((int(turnAngleHorizontal)).to_bytes(1, byteorder='big'))
+                ser.write((int(turnAngleHorizontal)).to_bytes(1, byteorder='big'))
 
                 # Calculate error from box
                 
@@ -249,7 +249,7 @@ while (True):
                 print(f"Go down by {turnAngleVertical}")
                 #Send angle over UART
                 turnAngleVertical |= (1<<7) | (1<<6)
-                #ser.write((int(turnAngleVertical)).to_bytes(1, byteorder='big'))
+                ser.write((int(turnAngleVertical)).to_bytes(1, byteorder='big'))
                 
                 # Calculate error from box
                 if(maxCenter[0]>box_x_max):
@@ -266,7 +266,7 @@ while (True):
                 print(f"Go up by {turnAngleVertical}")
                 #Send angle over UART
                 turnAngleVertical |= (1<<7)
-                #ser.write((int(turnAngleVertical)).to_bytes(1, byteorder='big'))
+                ser.write((int(turnAngleVertical)).to_bytes(1, byteorder='big'))
                 
                 #error from box
                 
