@@ -156,18 +156,23 @@ while (True):
     # Convert to hsv
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
 
-    # Errode
-    erode = cv2.erode(hsv, None, iterations=2)
-
-    # dilate
-    dilate = cv2.dilate(erode, None, iterations=2)
-
     # Find thresholds in range for a red colour in hsv
     lower_red = np.array([minHue, minSat, minVal])
     upper_red = np.array([maxHue, maxSat, maxVal])
     maskRed = cv2.inRange(dilate, lower_red, upper_red)
 
-    findContours = cv2.findContours(maskRed, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+    # Errode
+    #erode = cv2.erode(maskRed, None, iterations=2)
+    # dilate
+    dilate = cv2.dilate(maskRed, None, iterations=2)
+    #erode = cv2.erode(dilate, None, iterations=2)
+    findContours = cv2.findContours(dilate, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+
+    #cv2.imshow('Before', frame)
+    #cv2.imshow('AfterMask', maskRed)
+    #cv2.imshow('After Operation', dilate)
+    #cv2.waitKey()
+    #cv2.destroyAllWindows()
 
     maxRadius = 0
     maxCenter = (0, 0)
