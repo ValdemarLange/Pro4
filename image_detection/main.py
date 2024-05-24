@@ -282,12 +282,13 @@ while (True):
             else :
                 xErrorFromBox = 0
                 yErrorFromBox = 0
-                
+            
+            #Calculate error from center
             errorFromCenter = math.sqrt((maxCenter[0] - 320)**2 + (maxCenter[1] - 240)**2)
-    
+
+            # Write to CSV file
             with open(f'{fileName}.csv', 'a', newline='') as file:
                 writer = csv.writer(file)
-                # Write errorFromCenter to the CSV file
                 writer.writerow([frameCounter, errorFromCenter, xErrorFromBox, yErrorFromBox])
                 
     else:
@@ -298,12 +299,10 @@ while (True):
         lengthx = measurementsx[4] - measurementsx[0]
         lengthy = measurementsy[4] - measurementsy[0]
 
-        # print(lengthx, lengthy)
 
         measurementsx.clear()
         measurementsy.clear()
 
-    # print(len(measurementsx))
 
     # draw box that the ball should stay in
     cv2.rectangle(frame, (box_x_min, box_y_min), (box_x_max, box_y_max), (255, 0, 0), 2)
