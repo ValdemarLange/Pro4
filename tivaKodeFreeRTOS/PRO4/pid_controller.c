@@ -286,6 +286,7 @@ void position_control(void *pvParameters)
         if( (receivedReference & 0x80) & repeatAdvoidance )
         {
             receivedReference &= ~0x80; //Clear bit 7
+            receivedReference = receivedReference / 1.33;
             repeatAdvoidance = FALSE;  //Clear repeatAdvoidance boolean to avoid responding to the same error twice
 
             if( xSemaphoreTake( tilt_semphr, ( TickType_t ) 100 ) == pdTRUE ) //Take semaphore
