@@ -1,4 +1,3 @@
-/***************************** Include files *******************************/
 #include "uart.h"
 #include <stdint.h>
 #include "tm4c123gh6pm.h"
@@ -6,7 +5,6 @@
 #include "SPI.h"
 
 
-/*****************************    Defines    *******************************/
 #define PIOSC_clock 16000000                                    //Precision Internal Oscillator
 #define BAUDRATE 115200
 
@@ -19,17 +17,7 @@
 #define UART_PIN_ASSIGNMENT 0x11
 
 
-/*****************************   Constants   *******************************/
-
-/*****************************   Variables   *******************************/
-
-
-/*****************************   Functions   *******************************/
-void init_uart()
-/*****************************************************************************
-*   Function : See module specification (.h-file).
-*****************************************************************************/
-{
+void init_uart(){
     // Initialization and Configuration                         // page 900
     SYSCTL_RCGCUART_R |= PORTA_RUN_MODE_EN;                     // Aktiver UART0 clock       //page 343
 
@@ -60,6 +48,8 @@ void init_uart()
     BRD = 64000000 / BAUDRATE;       // X-sys*64/(16*baudrate) = 16M*4/baudrate
     UART0_IBRD_R = BRD / 64;
     UART0_FBRD_R = BRD & 0x0000003F;
+//    UART0_IBRD_R = 8; //(uint16_t)BRD;                                           // Integer del af BRD
+//    UART0_FBRD_R = 44;  //(int)(BDR_float * 64 + 0.5);                             // Fractional del af BRD
 
     //change in baudrate registers must be followed by a write to LCRH
     UART0_LCRH_R = DATA_LENGTH_AND_NONPARITY_FIFO;                          // Konfigurer frame: 8 data bits, ingen parity, 1 stop bit, fifo enabled  // page 914
@@ -72,11 +62,7 @@ void init_uart()
 
 
 
-void UART0_SendChar(INT8U data)
-/*****************************************************************************
-*   Function : See module specification (.h-file).
-*****************************************************************************/
-{
+void UART0_SendChar(INT8U data){
     while( UART0_FR_R & UART_FR_TXFF );                                      // Vent indtil TX holding register bliver tom
     UART0_DR_R = data;                                                      // Skriv data til data registeret
 }
@@ -84,37 +70,53 @@ void UART0_SendChar(INT8U data)
 
 
 
-char UART0_ReceiveChar()
-/*****************************************************************************
-*   Function : See module specification (.h-file).
-*****************************************************************************/
-{
+char UART0_ReceiveChar(){
 
     while( UART0_FR_R & UART_FR_RXFE );                                     // Vent indtil RX FIFO ikke er tom
-    return UART0_DR_R;                                                      // L�s og returner data fra data registeret
+    return UART0_DR_R;                                                      // Læs og returner data fra data registeret
 }
 
 
 
 
-void UART0_SendInt16(INT16U data)
-/*****************************************************************************
-*   Function : See module specification (.h-file).
-*****************************************************************************/
-{
+
+void UART0_SendInt16(INT16U data){
     UART0_SendChar(data >> 8);
     UART0_SendChar(data);
 }
 
+void UART0_SendInt32(INT32U data){
+    unsigned char *ptr, i;
+    ptr = (unsigned char *)&data;                       //pointer til første adresse for float
+    for (i = 0; i < sizeof(INT32U); i++){
+        UART0_SendChar(*(ptr + i));                     //sender byten fra 1 til 4 addrese
+    }
+}
 
-INT16U UART0_INT16_receive()
-/*****************************************************************************
-*   Function : See module specification (.h-file).
-*****************************************************************************/
-{
+void UART0_SendFloat(FP32 data){
+    unsigned char *ptr, i;
+    ptr = (unsigned char *)&data;                       //pointer til første adresse for float
+    for (i = 0; i < sizeof(FP32); i++){
+        UART0_SendChar(*(ptr + i));                     //sender byten fra 1 til 4 addrese
+    }
+}
+
+INT16U UART0_INT16_receive(){
+
     INT16U data = UART0_ReceiveChar();
     data = (data << 8);
     data += UART0_ReceiveChar();
 
     return data;
+}
+
+
+void UART0_Echo_task(void *pvParameters)
+{
+    INT8U ch;
+    while(1)
+    {
+        ch = UART0_ReceiveChar();
+        UART0_SendChar(ch);
+    }
 }
