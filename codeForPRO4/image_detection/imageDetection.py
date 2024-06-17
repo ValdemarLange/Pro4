@@ -108,9 +108,9 @@ print(f"Val tolerance: {maxVal-minVal}")
 
 
 #boxx = int(130)
-boxx = int(80)
+boxx = int(40)
 #boxy = int(100)
-boxy = int(60)
+boxy = int(30)
 # Define the box boundaries
 box_x_min, box_y_min = 320-boxx, 240-boxy
 box_x_max, box_y_max = 320+boxx, 240+boxy
